@@ -1,14 +1,18 @@
 import React from 'react'
 
-const Square = ({value, index, actionGame}) => {
+const Square = ({value, index, turnCounter}) => {
 
   const handleClick = () => {
-    actionGame (index)
+    turnCounter (index)
   }
 
   return (
     <>
-    <div className="square" onClick={handleClick}>{value}</div>
+    <div 
+    className="square" 
+    onClick={handleClick}>
+    {value}
+    </div>
     </>
   )
 }
