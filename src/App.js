@@ -10,6 +10,9 @@ const [counter, setCounter] = useState(0)
 
 
 const turnCounter = (eachIndex) => {
+  if (squares[eachIndex] !== null) {
+    return(eachIndex)
+  }
   let updateBoard = [...squares]
   if (counter % 2 === 0) {
     updateBoard[eachIndex] = "❌"
